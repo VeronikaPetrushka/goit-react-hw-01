@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Profile from './components/Profile/socialProfile'
+import FriendList from './components/Friends/FriendList'
 
 const userData = {
   username: "Jacques Gluke",
@@ -17,6 +18,40 @@ const userData = {
 };
 
 
+const friends = [
+  {
+    avatar: "https://cdn-icons-png.flaticon.com/512/1998/1998592.png",
+    name: "Mango",
+    isOnline: true,
+    id: 1812
+  },
+  {
+    avatar: "https://cdn-icons-png.flaticon.com/512/616/616438.png",
+    name: "Kiwi",
+    isOnline: false,
+    id: 1137
+  },
+  {
+    avatar: "https://cdn-icons-png.flaticon.com/512/1623/1623681.png",
+    name: "Ajax",
+    isOnline: true,
+    id: 1213
+  },
+  {
+    avatar: "https://cdn-icons-png.flaticon.com/512/2977/2977285.png",
+    name: "Jay",
+    isOnline: true,
+    id: 1714
+  },
+  {
+    avatar: "https://cdn-icons-png.flaticon.com/512/1998/1998749.png",
+    name: "Poly",
+    isOnline: false,
+    id: 1284
+  }
+];
+
+
 const App = () => {
   return (
     <>
@@ -26,40 +61,10 @@ const App = () => {
         location={userData.location}
         image={userData.avatar}
         stats={userData.stats}
-      />
+      />
+      <FriendList friends={friends} />
     </>
   );
 };
 
 export default App;
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App

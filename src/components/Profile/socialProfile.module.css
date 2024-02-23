@@ -17,9 +17,11 @@ img {
     border-radius: 8px;
     border-color: black;
     outline: none;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     padding-top: 5px;
     max-height: 174px;
+    max-width: fit-content;
+    margin: auto;
 }
 
 .userImgWrapper {
