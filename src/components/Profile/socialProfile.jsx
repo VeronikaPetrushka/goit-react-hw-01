@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import cn from 'classnames'
 import css from './socialProfile.module.css'
 
 const Profile = ({ name, image, tag, location, stats }) => {
